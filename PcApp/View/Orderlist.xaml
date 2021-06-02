@@ -1,0 +1,22 @@
+﻿<Page x:Class="PcApp.View.Orderlist"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PcApp.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="Orderlist">
+
+    <Grid>
+        <DataGrid x:Name="dtGrid" HorizontalAlignment="Left" Height="426" Margin="463,115,0,0" VerticalAlignment="Top" Width="468" BorderBrush="{x:Null}" ItemsSource="{Binding}" SelectionChanged="dtGrid_SelectionChanged"/>
+        <TextBox x:Name="partname" HorizontalAlignment="Left" Height="28" Margin="157,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="217"/>
+        <Label Content="제품명" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="92,115,0,0"/>
+        <Label Content="리뷰쓰기" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="204,58,0,0"/>
+        <TextBox x:Name="reviewtext" HorizontalAlignment="Left" Height="206" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="217" Margin="157,260,0,0"/>
+        <Button Content="리뷰작성" HorizontalAlignment="Left" VerticalAlignment="Top" Width="217" Margin="157,479,0,0" Height="62" Click="Button_Click"/>
+        <TextBox x:Name="orderid" HorizontalAlignment="Left" Height="28" Margin="157,172,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="217"/>
+        <Label Content="주문번호" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="92,172,0,0"/>
+
+    </Grid>
+</Page>

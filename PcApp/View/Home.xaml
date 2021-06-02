@@ -1,0 +1,29 @@
+﻿<Page x:Class="PcApp.View.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PcApp.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="Home">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/image/로고.png" Stretch="Uniform"/>
+        </Grid.Background>
+
+        <Button Content="" HorizontalAlignment="Left" Height="94" Margin="136,475,0,0" VerticalAlignment="Top" Width="200" BorderBrush="White" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/image/로그인버튼.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="93" Margin="664,475,0,0" VerticalAlignment="Top" Width="202" BorderBrush="White" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/image/회원가입버튼.png"/>
+            </Button.Background>
+        </Button>
+
+
+    </Grid>
+</Page>
