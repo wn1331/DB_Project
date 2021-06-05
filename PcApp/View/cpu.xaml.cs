@@ -56,27 +56,47 @@ namespace PcApp.View
                 ptprice.Text = myrow.part_price.ToString();
                 ptcategory.Text = myrow.part_category.ToString();
                 ptquantity.Text = myrow.part_quantity.ToString();
-
+                
                 Application.Current.Properties["PartNumsession"] = myrow.part_id;
 
-                //string connectionString = "Server=localhost;Database=pcshop;UId=root;Password=020512;";
-                //MySqlConnection connection_review_parts = new MySqlConnection(connectionString);
-                //MySqlCommand cmd_review_parts = new MySqlCommand("select * from review_parts where review_parts.part_id='"+myrow.part_id.ToString()+"' and ;", connection_review_parts);
-                //////////////////////////수정요망//////////////////////////
-                //connection_review_parts.Open();
-                //DataTable dt_review_parts = new DataTable();
-                //dt_review_parts.Load(cmd_review_parts.ExecuteReader());
-                //List<Review_parts> review_Parts = dt_review_parts.DataTableToList<Review_parts>();
-                ////
+                string connectionString = "Server=localhost;Database=pcshop;UId=root;Password=020512;";
+                MySqlConnection connection_review_parts = new MySqlConnection(connectionString);
+                MySqlCommand cmd_review_parts = new MySqlCommand("select * from review where review_id in (select review_id from review_parts where part_id = '"+myrow.part_id+"');", connection_review_parts);
+                ////////////////////////수정요망//////////////////////////
+                
+                connection_review_parts.Open();
+                DataTable dt_review_parts = new DataTable();
+                dt_review_parts.Load(cmd_review_parts.ExecuteReader());
+                List<Review> review_Parts = dt_review_parts.DataTableToList<Review>();
+                //
+                
 
-
-
-
+                //if (review_Parts[0]!=null && review_Parts[1]!= null && review_Parts[2] != null){
+                //    string a = review_Parts[0].review_text;
+                //    string b = review_Parts[1].review_text;
+                //    string c = review_Parts[2].review_text;
+                //    review1.Text = a;
+                //    review2.Text = b;
+                //    review3.Text = c;
+                //}
+                //else
+                //{
+                //    string a = "리뷰없음"; 
+                //    string b = "리뷰없음"; 
+                //    string c = "리뷰없음";
+                //    review1.Text = a;
+                //    review2.Text = b;
+                //    review3.Text = c;
+                //}
+                ////MessageBox.Show(review_Parts[]);
+                //MessageBox.Show("?오류4");
+                
+                
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("예외처리오류");
+                MessageBox.Show("?오류");
             }
         }
 
@@ -142,7 +162,7 @@ namespace PcApp.View
                     cmd.CommandText = "update part set part_quantity =" + partQuantity + "" + " where part_id='" + partsession.part_id + "';";
                     cmd_user.CommandText = "update user set user_point=user_point-" + partsession.part_price + " where user_id='" + usersession.user_id + "';";
                     //여기까지 돈빼고 수량빼고
-                    cmd_orders.CommandText = "insert into pcshop.orders (user_id,part_id) values ('"+usersession.user_id+"','"+partsession.part_id+"');";//데이트타임 나우 넣어야함.
+                    cmd_orders.CommandText = "insert into pcshop.orders (user_id,part_id) values ('"+usersession.user_id+"','"+partsession.part_id+"');";
 
                     MessageBox.Show("구매 성공!");
                     NavigationService.Navigate(new Uri("/view/Main.xaml", UriKind.Relative));
@@ -162,6 +182,11 @@ namespace PcApp.View
 
             }
             
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/view/reviewPage.xaml", UriKind.Relative));
         }
     }
 }

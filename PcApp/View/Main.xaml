@@ -9,12 +9,12 @@
       Title="Main">
 
     <Grid>
-        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="827,24,0,0" VerticalAlignment="Top" Width="136" BorderBrush="White" Click="Button_Click_1" RenderTransformOrigin="0.306,0.398">
+        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="836,24,0,0" VerticalAlignment="Top" Width="136" BorderBrush="White" Click="Button_Click_1" RenderTransformOrigin="0.306,0.398">
             <Button.Background>
                 <ImageBrush ImageSource="/image/로그아웃버튼.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="112" Margin="655,235,0,0" VerticalAlignment="Top" Width="234" BorderBrush="White" Click="Button_Click_3">
+        <Button Content="" HorizontalAlignment="Left" Height="144" Margin="605,407,0,0" VerticalAlignment="Top" Width="313" BorderBrush="White" Click="Button_Click_3">
             <Button.Background>
                 <ImageBrush ImageSource="/image/전체목록보기.png"/>
             </Button.Background>
@@ -29,6 +29,11 @@
                 <ImageBrush ImageSource="/image/구매목록.png"/>
             </Button.Background>
         </Button>
+        <Image HorizontalAlignment="Left" Height="222" VerticalAlignment="Top" Width="253" Margin="68,69,0,0"/>
+        <Image Margin="27,119,732,263" Source="/PcApp;component/그래픽.jpg" Stretch="Fill"/>
+        <Image Margin="268,119,491,263" Source="/PcApp;component/cpu.jpg" Stretch="Fill"/>
+        <Image Margin="27,337,737,22" Source="/PcApp;component/ssd.jpg" Stretch="Fill"/>
+        <Image Margin="263,337,491,22" Source="/PcApp;component/ram.jpg" Stretch="Fill"/>
 
     </Grid>
 </Page>

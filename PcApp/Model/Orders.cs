@@ -24,16 +24,7 @@ namespace PcApp.Model
         }
 
 
-        private string manager;
-        public string orders_manager
-        {
-            get { return manager; }
-            set
-            {
-                manager = value;
-
-            }
-        }
+     
 
 
         private int P_id;

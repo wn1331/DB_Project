@@ -62,10 +62,11 @@ namespace PcApp.View
                 cmd_money.CommandText = "update user set user_point ="+userMoney+"" + " where user_id='" +usersession.user_id+ "';";
                 cmd_money.ExecuteNonQuery();
                 userPoint.Text = userMoney.ToString();
+                MessageBox.Show("정상 입금 되었습니다!");
             }
-            finally
+            catch
             {
-                
+                MessageBox.Show("입금할 돈을 입력하세요!");
             }
         }
     }

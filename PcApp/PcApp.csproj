@@ -127,6 +127,9 @@
     <Compile Include="View\Pointcharge.xaml.cs">
       <DependentUpon>Pointcharge.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\reviewPage.xaml.cs">
+      <DependentUpon>reviewPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -164,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pointcharge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reviewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -212,6 +219,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\구매목록.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="그래픽.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cpu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ssd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ram.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

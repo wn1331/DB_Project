@@ -65,14 +65,14 @@ namespace PcApp.View
             connection_part.Close();
         }
 
-        private void dtGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void dtGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)//클릭했을 시에 왼쪽에 뜨는 창
         {
             Orders myrow = (Orders)dtGrid.CurrentCell.Item;
             partname.Text = myrow.part_id.ToString();
             orderid.Text = myrow.orders_id.ToString();
             Application.Current.Properties["PartNumsession"] = myrow.part_id;
             
-
+            
 
         }
 
@@ -126,13 +126,13 @@ namespace PcApp.View
                 int max = Convert.ToInt32(dt_review.AsEnumerable().Max(row => row["review_id"]));
                 Review reviewsession = reviews.Single((x) => x.review_id.Equals(max));
 
-
+                //review_parts에 데이터 집어넣기
                 MySqlConnection conn2 = new MySqlConnection("Server=localhost;Database=pcshop;UId=root;Password=020512;");
                 MySqlCommand comm2 = new MySqlCommand();
 
                 conn2.Open();
                 comm2.CommandText = "INSERT INTO review_parts(part_id, review_id) VALUES (@part_id, @review_id)";
-                //mysql 단일값 가져오기
+                
                 comm2.Parameters.Add("@part_id", MySqlDbType.Text).Value = partsession.part_id;
                 comm2.Parameters.Add("@review_id", MySqlDbType.Text).Value = reviewsession.review_id;
 
