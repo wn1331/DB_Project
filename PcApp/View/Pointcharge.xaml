@@ -20,6 +20,7 @@
         </Button>
 
         <Image HorizontalAlignment="Left" Height="298" VerticalAlignment="Top" Width="272" Margin="230,134,0,0" Source="/image/로고.png"/>
+        <Button Content="홈으로" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="39" Click="Button_Click_1"/>
 
     </Grid>
 </Page>

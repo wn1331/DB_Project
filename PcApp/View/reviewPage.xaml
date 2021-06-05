@@ -14,6 +14,7 @@
         <TextBox x:Name="reviewtext" HorizontalAlignment="Left" Height="288" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Margin="180,91,0,0"/>
         <Label Content="회원아이디" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,49,0,0" Height="23" Width="72"/>
         <Label Content="리뷰" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,87,0,0" Height="23" Width="72"/>
+        <Button Content="제품목록" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Page>

@@ -232,5 +232,17 @@
   <ItemGroup>
     <Resource Include="ram.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\cpu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\ram.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\ssd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\그래픽.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

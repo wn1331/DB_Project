@@ -69,5 +69,10 @@ namespace PcApp.View
                 MessageBox.Show("입금할 돈을 입력하세요!");
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/view/Main.xaml", UriKind.Relative));
+        }
     }
 }

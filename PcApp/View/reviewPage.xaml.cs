@@ -44,5 +44,10 @@ namespace PcApp.View
             reviewid.Text = myrow.user_id;
             reviewtext.Text = myrow.review_text;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/view/cpu.xaml", UriKind.Relative));
+        }
     }
 }
